@@ -1,14 +1,3367 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Web Page</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_88fc6866a5ac899828c33718f7171284 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
 </head>
 <body>
-
-<h1>Milujuuuuu Estherkuuuuuuuu</h1>
-<p>Strasne moooooooc</p>
-
+    
+    
+<div style="
+    position: fixed;
+    bottom: 30px; left: 30px; width: 250px; height: 170px;
+    background-color: white;
+    border:2px solid grey; z-index:9999; font-size:14px;
+    padding: 10px;">
+<b>Legenda barev:</b><br>
+<i class="fa fa-map-marker fa-2x" style="color:green"></i> &nbsp; < 3 měsíců (0)<br>
+<i class="fa fa-map-marker fa-2x" style="color:orange"></i> &nbsp; 3–6 měsíců (44)<br>
+<i class="fa fa-map-marker fa-2x" style="color:red"></i> &nbsp; > 6 měsíců (42)<br>
+<i class="fa fa-map-marker fa-2x" style="color:white"></i> &nbsp; Neznámo (0)
+</div>
+    
+            <div class="folium-map" id="map_88fc6866a5ac899828c33718f7171284" ></div>
+        
 </body>
+<script>
+    
+    
+            var map_88fc6866a5ac899828c33718f7171284 = L.map(
+                "map_88fc6866a5ac899828c33718f7171284",
+                {
+                    center: [49.8, 15.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5bf951d9fcf0921f471a8d2e49b15a62 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5bf951d9fcf0921f471a8d2e49b15a62.addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var marker_9a936dfcfc41f51bc55f904754516539 = L.marker(
+                [49.27012, 14.7880325],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_2d92db531ed3a48c409cb7c77edc9882 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_13370cc87683a3627f84aadafc2db127 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fee015d7826df96bc48218ccb9019d20 = $(`<div id="html_fee015d7826df96bc48218ccb9019d20" style="width: 100.0%; height: 100.0%;">ČS 173<br>Roční kontrola: 2024-04-29 00:00:00</div>`)[0];
+                popup_13370cc87683a3627f84aadafc2db127.setContent(html_fee015d7826df96bc48218ccb9019d20);
+            
+        
+
+        marker_9a936dfcfc41f51bc55f904754516539.bindPopup(popup_13370cc87683a3627f84aadafc2db127)
+        ;
+
+        
+    
+    
+                marker_9a936dfcfc41f51bc55f904754516539.setIcon(icon_2d92db531ed3a48c409cb7c77edc9882);
+            
+    
+            var marker_a8d4acf7a6912d8a673093b018a5b200 = L.marker(
+                [49.811789, 13.392498],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_460f2beea72813eb49b63845673f3954 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_42ea94850dfbd81d78580803b602fe29 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0469d4399af3455cdb71c97d5fbc2b81 = $(`<div id="html_0469d4399af3455cdb71c97d5fbc2b81" style="width: 100.0%; height: 100.0%;">ČS 132<br>Roční kontrola: 2024-05-06 00:00:00</div>`)[0];
+                popup_42ea94850dfbd81d78580803b602fe29.setContent(html_0469d4399af3455cdb71c97d5fbc2b81);
+            
+        
+
+        marker_a8d4acf7a6912d8a673093b018a5b200.bindPopup(popup_42ea94850dfbd81d78580803b602fe29)
+        ;
+
+        
+    
+    
+                marker_a8d4acf7a6912d8a673093b018a5b200.setIcon(icon_460f2beea72813eb49b63845673f3954);
+            
+    
+            var marker_f3b9519c20736970fe3c3bd0c844567e = L.marker(
+                [49.9905085, 13.4884151],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_528a0a9a0fac3f9f27a141bfbe3debf0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_19e83f692c3fb0e6ebd2812ca31a7681 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_323ed40f18dafa58de2d0ee5620a32f6 = $(`<div id="html_323ed40f18dafa58de2d0ee5620a32f6" style="width: 100.0%; height: 100.0%;">ČS 133<br>Roční kontrola: 2024-05-07 00:00:00</div>`)[0];
+                popup_19e83f692c3fb0e6ebd2812ca31a7681.setContent(html_323ed40f18dafa58de2d0ee5620a32f6);
+            
+        
+
+        marker_f3b9519c20736970fe3c3bd0c844567e.bindPopup(popup_19e83f692c3fb0e6ebd2812ca31a7681)
+        ;
+
+        
+    
+    
+                marker_f3b9519c20736970fe3c3bd0c844567e.setIcon(icon_528a0a9a0fac3f9f27a141bfbe3debf0);
+            
+    
+            var marker_b31aa97a565b9deeb4ae763a33600e3b = L.marker(
+                [49.585319, 13.536337],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_a5d4f79916e7b4d543d5937470cbdd0b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a34a7abda697ff762459ff6afa1d1090 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6f13243f9309b3441262215406cdeabd = $(`<div id="html_6f13243f9309b3441262215406cdeabd" style="width: 100.0%; height: 100.0%;">ČS 136<br>Roční kontrola: 2024-07-25 00:00:00</div>`)[0];
+                popup_a34a7abda697ff762459ff6afa1d1090.setContent(html_6f13243f9309b3441262215406cdeabd);
+            
+        
+
+        marker_b31aa97a565b9deeb4ae763a33600e3b.bindPopup(popup_a34a7abda697ff762459ff6afa1d1090)
+        ;
+
+        
+    
+    
+                marker_b31aa97a565b9deeb4ae763a33600e3b.setIcon(icon_a5d4f79916e7b4d543d5937470cbdd0b);
+            
+    
+            var marker_fd2bd05487204ed1b933fff4ec3859c9 = L.marker(
+                [49.481575, 13.5863533],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_14f5f1b58ccb85f86d99f56fe7a1aadc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3396df5f28338cc66f449fb496bbd527 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26cd2372b650eb954d8c73741790d1d6 = $(`<div id="html_26cd2372b650eb954d8c73741790d1d6" style="width: 100.0%; height: 100.0%;">ČS 137<br>Roční kontrola: 2024-07-25 00:00:00</div>`)[0];
+                popup_3396df5f28338cc66f449fb496bbd527.setContent(html_26cd2372b650eb954d8c73741790d1d6);
+            
+        
+
+        marker_fd2bd05487204ed1b933fff4ec3859c9.bindPopup(popup_3396df5f28338cc66f449fb496bbd527)
+        ;
+
+        
+    
+    
+                marker_fd2bd05487204ed1b933fff4ec3859c9.setIcon(icon_14f5f1b58ccb85f86d99f56fe7a1aadc);
+            
+    
+            var marker_8327bbcb1a5944f04d2ba6da85daa756 = L.marker(
+                [48.910163, 13.871808],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_f366b0239846d896c2646877d8fe12eb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_56f14818078a1f0ce642ce7d7043d936 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_177b84b7199215e585e405019c671eb2 = $(`<div id="html_177b84b7199215e585e405019c671eb2" style="width: 100.0%; height: 100.0%;">ČS 192<br>Roční kontrola: 2024-07-25 00:00:00</div>`)[0];
+                popup_56f14818078a1f0ce642ce7d7043d936.setContent(html_177b84b7199215e585e405019c671eb2);
+            
+        
+
+        marker_8327bbcb1a5944f04d2ba6da85daa756.bindPopup(popup_56f14818078a1f0ce642ce7d7043d936)
+        ;
+
+        
+    
+    
+                marker_8327bbcb1a5944f04d2ba6da85daa756.setIcon(icon_f366b0239846d896c2646877d8fe12eb);
+            
+    
+            var marker_d1534f5f4ec447021193d88d2d4a30d0 = L.marker(
+                [49.723159, 13.354248],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_8cef0da24c4854c578db1e1bd95cfd76 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dcdf4ec7dac29b9989e0720e9ddeb5ea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f0ab7d4d03cd01d333edd22fbcbcf8e = $(`<div id="html_4f0ab7d4d03cd01d333edd22fbcbcf8e" style="width: 100.0%; height: 100.0%;">ČS 131<br>Roční kontrola: 2024-07-29 00:00:00</div>`)[0];
+                popup_dcdf4ec7dac29b9989e0720e9ddeb5ea.setContent(html_4f0ab7d4d03cd01d333edd22fbcbcf8e);
+            
+        
+
+        marker_d1534f5f4ec447021193d88d2d4a30d0.bindPopup(popup_dcdf4ec7dac29b9989e0720e9ddeb5ea)
+        ;
+
+        
+    
+    
+                marker_d1534f5f4ec447021193d88d2d4a30d0.setIcon(icon_8cef0da24c4854c578db1e1bd95cfd76);
+            
+    
+            var marker_6b153f2b21c4274b60fb510e1f9c0638 = L.marker(
+                [49.0819665, 15.4198037],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_f4ad35df79c987397bdc71b31ca3f3ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_01a7e285c8976bda53cd7d80c7fc4cd9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff20017da9404bfe45f2c5500c582f87 = $(`<div id="html_ff20017da9404bfe45f2c5500c582f87" style="width: 100.0%; height: 100.0%;">ČS 500<br>Roční kontrola: 2024-07-30 00:00:00</div>`)[0];
+                popup_01a7e285c8976bda53cd7d80c7fc4cd9.setContent(html_ff20017da9404bfe45f2c5500c582f87);
+            
+        
+
+        marker_6b153f2b21c4274b60fb510e1f9c0638.bindPopup(popup_01a7e285c8976bda53cd7d80c7fc4cd9)
+        ;
+
+        
+    
+    
+                marker_6b153f2b21c4274b60fb510e1f9c0638.setIcon(icon_f4ad35df79c987397bdc71b31ca3f3ce);
+            
+    
+            var marker_f33a60d442e5d1a5457d603af30096f6 = L.marker(
+                [50.0932353, 12.8408725],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_1d0df652488e24b15a07696d5d3606e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_747768b42d263317c46cc02d3e88b749 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2adf2761c6d0d8d8f00ff8d89c48322f = $(`<div id="html_2adf2761c6d0d8d8f00ff8d89c48322f" style="width: 100.0%; height: 100.0%;">ČS 107<br>Roční kontrola: 2024-08-12 00:00:00</div>`)[0];
+                popup_747768b42d263317c46cc02d3e88b749.setContent(html_2adf2761c6d0d8d8f00ff8d89c48322f);
+            
+        
+
+        marker_f33a60d442e5d1a5457d603af30096f6.bindPopup(popup_747768b42d263317c46cc02d3e88b749)
+        ;
+
+        
+    
+    
+                marker_f33a60d442e5d1a5457d603af30096f6.setIcon(icon_1d0df652488e24b15a07696d5d3606e5);
+            
+    
+            var marker_ed93265ebd190d03870b52d363cebcca = L.marker(
+                [49.4084017, 13.2934739],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_a753c1c18111c108424e7019075b49a9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ad996b88ee956d96ed0646f81d3d4af = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f8b8cf66a4282f6f2b22c09b7a1f04f5 = $(`<div id="html_f8b8cf66a4282f6f2b22c09b7a1f04f5" style="width: 100.0%; height: 100.0%;">ČS 123<br>Roční kontrola: 2024-08-21 00:00:00</div>`)[0];
+                popup_1ad996b88ee956d96ed0646f81d3d4af.setContent(html_f8b8cf66a4282f6f2b22c09b7a1f04f5);
+            
+        
+
+        marker_ed93265ebd190d03870b52d363cebcca.bindPopup(popup_1ad996b88ee956d96ed0646f81d3d4af)
+        ;
+
+        
+    
+    
+                marker_ed93265ebd190d03870b52d363cebcca.setIcon(icon_a753c1c18111c108424e7019075b49a9);
+            
+    
+            var marker_a7b03b0fe366d66933144ee1284d8e36 = L.marker(
+                [49.3161292, 14.1361717],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_566c917791c652de0242fabe7e175539 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_efe14abe6c85929c1e72011f46deaa37 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_226171c30060f327f86c0a13b025c499 = $(`<div id="html_226171c30060f327f86c0a13b025c499" style="width: 100.0%; height: 100.0%;">ČS 184<br>Roční kontrola: 2024-08-21 00:00:00</div>`)[0];
+                popup_efe14abe6c85929c1e72011f46deaa37.setContent(html_226171c30060f327f86c0a13b025c499);
+            
+        
+
+        marker_a7b03b0fe366d66933144ee1284d8e36.bindPopup(popup_efe14abe6c85929c1e72011f46deaa37)
+        ;
+
+        
+    
+    
+                marker_a7b03b0fe366d66933144ee1284d8e36.setIcon(icon_566c917791c652de0242fabe7e175539);
+            
+    
+            var marker_201a0ac1068c127b53473c82cc9e6ac5 = L.marker(
+                [50.3195931, 12.519159],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_936284616fbfd00b6fd0c0651545f37b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1e6fb23aa18a4ad47f646116191fe754 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cedaa3e25133dc3517e8ddea9b4f0780 = $(`<div id="html_cedaa3e25133dc3517e8ddea9b4f0780" style="width: 100.0%; height: 100.0%;">ČS 102<br>Roční kontrola: 2024-08-23 00:00:00</div>`)[0];
+                popup_1e6fb23aa18a4ad47f646116191fe754.setContent(html_cedaa3e25133dc3517e8ddea9b4f0780);
+            
+        
+
+        marker_201a0ac1068c127b53473c82cc9e6ac5.bindPopup(popup_1e6fb23aa18a4ad47f646116191fe754)
+        ;
+
+        
+    
+    
+                marker_201a0ac1068c127b53473c82cc9e6ac5.setIcon(icon_936284616fbfd00b6fd0c0651545f37b);
+            
+    
+            var marker_d2d82a4c735b190a5fbc56a9acd2016a = L.marker(
+                [49.0120081, 14.788185],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_3c583bddd2751dab0c459cbeb8410950 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a681ba91f05308221405b751d58431cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a56dda663889c97b5afdd8f76719aa5 = $(`<div id="html_7a56dda663889c97b5afdd8f76719aa5" style="width: 100.0%; height: 100.0%;">ČS 172<br>Roční kontrola: 2024-08-23 00:00:00</div>`)[0];
+                popup_a681ba91f05308221405b751d58431cc.setContent(html_7a56dda663889c97b5afdd8f76719aa5);
+            
+        
+
+        marker_d2d82a4c735b190a5fbc56a9acd2016a.bindPopup(popup_a681ba91f05308221405b751d58431cc)
+        ;
+
+        
+    
+    
+                marker_d2d82a4c735b190a5fbc56a9acd2016a.setIcon(icon_3c583bddd2751dab0c459cbeb8410950);
+            
+    
+            var marker_6b9103aa13575f3ecf776de704e05061 = L.marker(
+                [49.7504178, 13.4039271],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_600ad667b6594853b80b876c87b58584 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_853ff8b38694042e7b2013a72501d389 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_11254f081fa12d4e66d200c3b207f6a4 = $(`<div id="html_11254f081fa12d4e66d200c3b207f6a4" style="width: 100.0%; height: 100.0%;">ČS 128<br>Roční kontrola: 2024-08-27 00:00:00</div>`)[0];
+                popup_853ff8b38694042e7b2013a72501d389.setContent(html_11254f081fa12d4e66d200c3b207f6a4);
+            
+        
+
+        marker_6b9103aa13575f3ecf776de704e05061.bindPopup(popup_853ff8b38694042e7b2013a72501d389)
+        ;
+
+        
+    
+    
+                marker_6b9103aa13575f3ecf776de704e05061.setIcon(icon_600ad667b6594853b80b876c87b58584);
+            
+    
+            var marker_4b94262cdd2aadade64a1693b20a845d = L.marker(
+                [49.0892161, 15.4370925],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_4d7a8bbaf9cb40866fc1138d745eb69f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f913927673925197c43f8838e7f52ecb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e083ec6c609f847182baa8680f16318 = $(`<div id="html_1e083ec6c609f847182baa8680f16318" style="width: 100.0%; height: 100.0%;">ČS 519<br>Roční kontrola: 2024-08-27 00:00:00</div>`)[0];
+                popup_f913927673925197c43f8838e7f52ecb.setContent(html_1e083ec6c609f847182baa8680f16318);
+            
+        
+
+        marker_4b94262cdd2aadade64a1693b20a845d.bindPopup(popup_f913927673925197c43f8838e7f52ecb)
+        ;
+
+        
+    
+    
+                marker_4b94262cdd2aadade64a1693b20a845d.setIcon(icon_4d7a8bbaf9cb40866fc1138d745eb69f);
+            
+    
+            var marker_60f3abfbed6aa90041210e992ed7862d = L.marker(
+                [49.7464113, 13.4416163],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_c4b09b26efcc8c6a81905fd7bf6ca312 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4b551efed689c3051f058d83ae6964f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26fe2561e3dbd31d27f175ba5f1e715f = $(`<div id="html_26fe2561e3dbd31d27f175ba5f1e715f" style="width: 100.0%; height: 100.0%;">ČS 129<br>Roční kontrola: 2024-08-28 00:00:00</div>`)[0];
+                popup_4b551efed689c3051f058d83ae6964f6.setContent(html_26fe2561e3dbd31d27f175ba5f1e715f);
+            
+        
+
+        marker_60f3abfbed6aa90041210e992ed7862d.bindPopup(popup_4b551efed689c3051f058d83ae6964f6)
+        ;
+
+        
+    
+    
+                marker_60f3abfbed6aa90041210e992ed7862d.setIcon(icon_c4b09b26efcc8c6a81905fd7bf6ca312);
+            
+    
+            var marker_b2943ad23b06c441c1ba905aea41316a = L.marker(
+                [49.7549777, 13.3106003],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_e64f333375c8f57b5cbf0af0a0c0ec1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_661ed217dd0f75d61e6274be69330763 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3dc9ee7abde4882555534474bbc7213d = $(`<div id="html_3dc9ee7abde4882555534474bbc7213d" style="width: 100.0%; height: 100.0%;">ČS 130<br>Roční kontrola: 2024-08-28 00:00:00</div>`)[0];
+                popup_661ed217dd0f75d61e6274be69330763.setContent(html_3dc9ee7abde4882555534474bbc7213d);
+            
+        
+
+        marker_b2943ad23b06c441c1ba905aea41316a.bindPopup(popup_661ed217dd0f75d61e6274be69330763)
+        ;
+
+        
+    
+    
+                marker_b2943ad23b06c441c1ba905aea41316a.setIcon(icon_e64f333375c8f57b5cbf0af0a0c0ec1d);
+            
+    
+            var marker_fa720c33ec933abaaac92a3f98564600 = L.marker(
+                [49.297094, 14.161101],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_c23c33cf22c769926cbd1391dc999282 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a0226b539d6975124e06d81f151d97a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_928fa1b835b99953e671c7c0699d6733 = $(`<div id="html_928fa1b835b99953e671c7c0699d6733" style="width: 100.0%; height: 100.0%;">ČS 164<br>Roční kontrola: 2024-09-03 00:00:00</div>`)[0];
+                popup_a0226b539d6975124e06d81f151d97a2.setContent(html_928fa1b835b99953e671c7c0699d6733);
+            
+        
+
+        marker_fa720c33ec933abaaac92a3f98564600.bindPopup(popup_a0226b539d6975124e06d81f151d97a2)
+        ;
+
+        
+    
+    
+                marker_fa720c33ec933abaaac92a3f98564600.setIcon(icon_c23c33cf22c769926cbd1391dc999282);
+            
+    
+            var marker_c24a8e477cdfec131968dcaad693b4b1 = L.marker(
+                [49.172666, 13.892563],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_6a2a041402bbbc9484b87de1b4551b7d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_114d953d40cec84502dedc18a0a5af5f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc2b09fb800dbe6713777b184e78d48e = $(`<div id="html_dc2b09fb800dbe6713777b184e78d48e" style="width: 100.0%; height: 100.0%;">ČS 144<br>Roční kontrola: 2024-09-05 00:00:00</div>`)[0];
+                popup_114d953d40cec84502dedc18a0a5af5f.setContent(html_dc2b09fb800dbe6713777b184e78d48e);
+            
+        
+
+        marker_c24a8e477cdfec131968dcaad693b4b1.bindPopup(popup_114d953d40cec84502dedc18a0a5af5f)
+        ;
+
+        
+    
+    
+                marker_c24a8e477cdfec131968dcaad693b4b1.setIcon(icon_6a2a041402bbbc9484b87de1b4551b7d);
+            
+    
+            var marker_f939afdf48eb75c7353e933655aed000 = L.marker(
+                [48.8208634, 14.4587936],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_92cd3bb833750ac1f162355c604e540c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_418cbd1f4128329cc2cca053bb4cb51e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c564b6ebc88097999306e020a2d9b04b = $(`<div id="html_c564b6ebc88097999306e020a2d9b04b" style="width: 100.0%; height: 100.0%;">ČS 145<br>Roční kontrola: 2024-09-10 00:00:00</div>`)[0];
+                popup_418cbd1f4128329cc2cca053bb4cb51e.setContent(html_c564b6ebc88097999306e020a2d9b04b);
+            
+        
+
+        marker_f939afdf48eb75c7353e933655aed000.bindPopup(popup_418cbd1f4128329cc2cca053bb4cb51e)
+        ;
+
+        
+    
+    
+                marker_f939afdf48eb75c7353e933655aed000.setIcon(icon_92cd3bb833750ac1f162355c604e540c);
+            
+    
+            var marker_5c8a234d524c3f939d140b2789e67abb = L.marker(
+                [48.6190786, 14.3247322],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_670222979388898c80bf208d36b10719 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c606b2c5ed074fc9a36eb3594b647f94 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa7241a18204cff3e596be3412059aad = $(`<div id="html_aa7241a18204cff3e596be3412059aad" style="width: 100.0%; height: 100.0%;">ČS 146<br>Roční kontrola: 2024-09-12 00:00:00</div>`)[0];
+                popup_c606b2c5ed074fc9a36eb3594b647f94.setContent(html_aa7241a18204cff3e596be3412059aad);
+            
+        
+
+        marker_5c8a234d524c3f939d140b2789e67abb.bindPopup(popup_c606b2c5ed074fc9a36eb3594b647f94)
+        ;
+
+        
+    
+    
+                marker_5c8a234d524c3f939d140b2789e67abb.setIcon(icon_670222979388898c80bf208d36b10719);
+            
+    
+            var marker_bdf8a73d0d8bf60010a7274937711908 = L.marker(
+                [49.227444, 14.720869],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_24ffb3010549a664beca79aac6d73c11 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_27adfb986ad3fada94610c92616b7be8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b61f83c6efc6627a09a23598b0304109 = $(`<div id="html_b61f83c6efc6627a09a23598b0304109" style="width: 100.0%; height: 100.0%;">ČS 159<br>Roční kontrola: 2024-09-13 00:00:00</div>`)[0];
+                popup_27adfb986ad3fada94610c92616b7be8.setContent(html_b61f83c6efc6627a09a23598b0304109);
+            
+        
+
+        marker_bdf8a73d0d8bf60010a7274937711908.bindPopup(popup_27adfb986ad3fada94610c92616b7be8)
+        ;
+
+        
+    
+    
+                marker_bdf8a73d0d8bf60010a7274937711908.setIcon(icon_24ffb3010549a664beca79aac6d73c11);
+            
+    
+            var marker_0ffe1e390794db5247e58f87f9bfbd6c = L.marker(
+                [49.27232, 13.83935],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_77c2e479655a0af42ab5cf5d7933e795 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5bc71c541445537918659774b2411e17 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff20874215d29f66f0b62886af7cd432 = $(`<div id="html_ff20874215d29f66f0b62886af7cd432" style="width: 100.0%; height: 100.0%;">ČS 178<br>Roční kontrola: 2024-09-16 00:00:00</div>`)[0];
+                popup_5bc71c541445537918659774b2411e17.setContent(html_ff20874215d29f66f0b62886af7cd432);
+            
+        
+
+        marker_0ffe1e390794db5247e58f87f9bfbd6c.bindPopup(popup_5bc71c541445537918659774b2411e17)
+        ;
+
+        
+    
+    
+                marker_0ffe1e390794db5247e58f87f9bfbd6c.setIcon(icon_77c2e479655a0af42ab5cf5d7933e795);
+            
+    
+            var marker_44e029653a40950d4d8f20a01f9cc1d2 = L.marker(
+                [48.988689, 14.478333],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_942b78a7b3b14bc52478c1885c32b971 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2b87db6de004a70074356d94176cff7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df460b1daf3df90ee4680b24e816b17d = $(`<div id="html_df460b1daf3df90ee4680b24e816b17d" style="width: 100.0%; height: 100.0%;">ČS 185<br>Roční kontrola: 2024-09-19 00:00:00</div>`)[0];
+                popup_d2b87db6de004a70074356d94176cff7.setContent(html_df460b1daf3df90ee4680b24e816b17d);
+            
+        
+
+        marker_44e029653a40950d4d8f20a01f9cc1d2.bindPopup(popup_d2b87db6de004a70074356d94176cff7)
+        ;
+
+        
+    
+    
+                marker_44e029653a40950d4d8f20a01f9cc1d2.setIcon(icon_942b78a7b3b14bc52478c1885c32b971);
+            
+    
+            var marker_8e239187365e4c94bb543310cf48a804 = L.marker(
+                [49.4411761, 14.3586372],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_35250eee5aa57be641738ab69cd78c75 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ba761ac78b43e6432130acbcb998dd5d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc757f7139245a84b028f73bf2d513fd = $(`<div id="html_fc757f7139245a84b028f73bf2d513fd" style="width: 100.0%; height: 100.0%;">ČS 165<br>Roční kontrola: 2024-09-20 00:00:00</div>`)[0];
+                popup_ba761ac78b43e6432130acbcb998dd5d.setContent(html_fc757f7139245a84b028f73bf2d513fd);
+            
+        
+
+        marker_8e239187365e4c94bb543310cf48a804.bindPopup(popup_ba761ac78b43e6432130acbcb998dd5d)
+        ;
+
+        
+    
+    
+                marker_8e239187365e4c94bb543310cf48a804.setIcon(icon_35250eee5aa57be641738ab69cd78c75);
+            
+    
+            var marker_7e4a02fbb36d3ed8228a350a456a4186 = L.marker(
+                [49.4027045, 14.6925463],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_5127a5c0cd93975a0000d0155a13fd26 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8e749d3ea8198ffddd2de9a3a89ebe6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_89a6b23c115e419241781351c886039b = $(`<div id="html_89a6b23c115e419241781351c886039b" style="width: 100.0%; height: 100.0%;">ČS 170<br>Roční kontrola: 2024-09-25 00:00:00</div>`)[0];
+                popup_8e749d3ea8198ffddd2de9a3a89ebe6d.setContent(html_89a6b23c115e419241781351c886039b);
+            
+        
+
+        marker_7e4a02fbb36d3ed8228a350a456a4186.bindPopup(popup_8e749d3ea8198ffddd2de9a3a89ebe6d)
+        ;
+
+        
+    
+    
+                marker_7e4a02fbb36d3ed8228a350a456a4186.setIcon(icon_5127a5c0cd93975a0000d0155a13fd26);
+            
+    
+            var marker_452a97f17b9c5d179bf1363b9a4fc7bf = L.marker(
+                [49.45688, 13.782584],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_6245438ce297ca318fd0e67aa1621299 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_45154368b9fbb68fcd5126e630678b0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f285d586c570f9f142d5dd5e7a9cc5db = $(`<div id="html_f285d586c570f9f142d5dd5e7a9cc5db" style="width: 100.0%; height: 100.0%;">ČS 147<br>Roční kontrola: 2024-10-02 00:00:00</div>`)[0];
+                popup_45154368b9fbb68fcd5126e630678b0b.setContent(html_f285d586c570f9f142d5dd5e7a9cc5db);
+            
+        
+
+        marker_452a97f17b9c5d179bf1363b9a4fc7bf.bindPopup(popup_45154368b9fbb68fcd5126e630678b0b)
+        ;
+
+        
+    
+    
+                marker_452a97f17b9c5d179bf1363b9a4fc7bf.setIcon(icon_6245438ce297ca318fd0e67aa1621299);
+            
+    
+            var marker_6b0cbcf9070ae71f0abf907fa7399807 = L.marker(
+                [49.198468, 14.2112979],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_2c5f491c0b4891497b436c80d239b067 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_18bcb91bf23f92966af435dc8e4cba99 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a8e8e3f9bf3c95b91dd9f01e50421e6 = $(`<div id="html_7a8e8e3f9bf3c95b91dd9f01e50421e6" style="width: 100.0%; height: 100.0%;">ČS 183<br>Roční kontrola: 2024-10-04 00:00:00</div>`)[0];
+                popup_18bcb91bf23f92966af435dc8e4cba99.setContent(html_7a8e8e3f9bf3c95b91dd9f01e50421e6);
+            
+        
+
+        marker_6b0cbcf9070ae71f0abf907fa7399807.bindPopup(popup_18bcb91bf23f92966af435dc8e4cba99)
+        ;
+
+        
+    
+    
+                marker_6b0cbcf9070ae71f0abf907fa7399807.setIcon(icon_2c5f491c0b4891497b436c80d239b067);
+            
+    
+            var marker_21371f94a78bb318b64fcb0532afce05 = L.marker(
+                [48.95168, 14.466001],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_833afd7ef8248d4238191dc66d9c4959 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8c479b433ff850c1be7b8023dfdbd67c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_945816c87d6c65987577641fff0c3111 = $(`<div id="html_945816c87d6c65987577641fff0c3111" style="width: 100.0%; height: 100.0%;">ČS 169<br>Roční kontrola: 2024-10-09 00:00:00</div>`)[0];
+                popup_8c479b433ff850c1be7b8023dfdbd67c.setContent(html_945816c87d6c65987577641fff0c3111);
+            
+        
+
+        marker_21371f94a78bb318b64fcb0532afce05.bindPopup(popup_8c479b433ff850c1be7b8023dfdbd67c)
+        ;
+
+        
+    
+    
+                marker_21371f94a78bb318b64fcb0532afce05.setIcon(icon_833afd7ef8248d4238191dc66d9c4959);
+            
+    
+            var marker_7a6cadbf282ca67ea552782a13e74275 = L.marker(
+                [49.698845, 13.423496],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_f7434cf87c889f0a3ffe5b10d37d3518 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_163bb33806a00fcf57aff952f981ab25 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_006e507a20538c63a777cb9bdb74a980 = $(`<div id="html_006e507a20538c63a777cb9bdb74a980" style="width: 100.0%; height: 100.0%;">ČS 155<br>Roční kontrola: 2024-10-18 00:00:00</div>`)[0];
+                popup_163bb33806a00fcf57aff952f981ab25.setContent(html_006e507a20538c63a777cb9bdb74a980);
+            
+        
+
+        marker_7a6cadbf282ca67ea552782a13e74275.bindPopup(popup_163bb33806a00fcf57aff952f981ab25)
+        ;
+
+        
+    
+    
+                marker_7a6cadbf282ca67ea552782a13e74275.setIcon(icon_f7434cf87c889f0a3ffe5b10d37d3518);
+            
+    
+            var marker_88274d4fab2de5e4567c8dea82eb434f = L.marker(
+                [49.5782279, 13.326998],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_93b75d9e235420a58a35cb48e9bdcb47 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_20b8ddd7fee67b95f71f757c5e6bc84e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d812fd1ddda86876bca3089353b7b4bf = $(`<div id="html_d812fd1ddda86876bca3089353b7b4bf" style="width: 100.0%; height: 100.0%;">ČS 124<br>Roční kontrola: 2024-10-19 00:00:00</div>`)[0];
+                popup_20b8ddd7fee67b95f71f757c5e6bc84e.setContent(html_d812fd1ddda86876bca3089353b7b4bf);
+            
+        
+
+        marker_88274d4fab2de5e4567c8dea82eb434f.bindPopup(popup_20b8ddd7fee67b95f71f757c5e6bc84e)
+        ;
+
+        
+    
+    
+                marker_88274d4fab2de5e4567c8dea82eb434f.setIcon(icon_93b75d9e235420a58a35cb48e9bdcb47);
+            
+    
+            var marker_526b62cec7ae678d20a9b09fdf802aea = L.marker(
+                [49.131469, 15.0026626],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_21790b88ba1c06c63da4106566e1f78f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_997898f0c4e1aaa23a7a6cc87c8f7d40 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d60cb525e70e621010219798b76fbc32 = $(`<div id="html_d60cb525e70e621010219798b76fbc32" style="width: 100.0%; height: 100.0%;">ČS 176<br>Roční kontrola: 2024-10-22 00:00:00</div>`)[0];
+                popup_997898f0c4e1aaa23a7a6cc87c8f7d40.setContent(html_d60cb525e70e621010219798b76fbc32);
+            
+        
+
+        marker_526b62cec7ae678d20a9b09fdf802aea.bindPopup(popup_997898f0c4e1aaa23a7a6cc87c8f7d40)
+        ;
+
+        
+    
+    
+                marker_526b62cec7ae678d20a9b09fdf802aea.setIcon(icon_21790b88ba1c06c63da4106566e1f78f);
+            
+    
+            var marker_9a27b4e43034d74d599697d274f22c01 = L.marker(
+                [48.664843, 14.16781],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_90b520a2bb0bd60d58a83d2370885d77 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_08f338e4e710bc3480b8e2b0d770d2c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b290cdd0d7dc77875bdbe357cc5c7cb5 = $(`<div id="html_b290cdd0d7dc77875bdbe357cc5c7cb5" style="width: 100.0%; height: 100.0%;">ČS 162<br>Roční kontrola: 2024-10-31 00:00:00</div>`)[0];
+                popup_08f338e4e710bc3480b8e2b0d770d2c6.setContent(html_b290cdd0d7dc77875bdbe357cc5c7cb5);
+            
+        
+
+        marker_9a27b4e43034d74d599697d274f22c01.bindPopup(popup_08f338e4e710bc3480b8e2b0d770d2c6)
+        ;
+
+        
+    
+    
+                marker_9a27b4e43034d74d599697d274f22c01.setIcon(icon_90b520a2bb0bd60d58a83d2370885d77);
+            
+    
+            var marker_368504b9dc1aac387c5b41247900c8c0 = L.marker(
+                [49.050228, 14.429808],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_2496cf9012b15c6e8150b00b7ef4dc0a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6f3fab720d2f456960f64e8dda3ead95 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3e75f36eae1318306623a7c9c35cd6b = $(`<div id="html_e3e75f36eae1318306623a7c9c35cd6b" style="width: 100.0%; height: 100.0%;">ČS 167<br>Roční kontrola: 2024-11-05 00:00:00</div>`)[0];
+                popup_6f3fab720d2f456960f64e8dda3ead95.setContent(html_e3e75f36eae1318306623a7c9c35cd6b);
+            
+        
+
+        marker_368504b9dc1aac387c5b41247900c8c0.bindPopup(popup_6f3fab720d2f456960f64e8dda3ead95)
+        ;
+
+        
+    
+    
+                marker_368504b9dc1aac387c5b41247900c8c0.setIcon(icon_2496cf9012b15c6e8150b00b7ef4dc0a);
+            
+    
+            var marker_bf51a622580d5df0524a904642e8d81c = L.marker(
+                [48.8248737, 14.3336793],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_bca3bd8b4dcc96a67cf84cd2059b03dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_36815e7a3222ac7b805505346462cccc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_65c99b40a0aa5b7d1ac56b91b7d419ba = $(`<div id="html_65c99b40a0aa5b7d1ac56b91b7d419ba" style="width: 100.0%; height: 100.0%;">ČS 163<br>Roční kontrola: 2024-11-06 00:00:00</div>`)[0];
+                popup_36815e7a3222ac7b805505346462cccc.setContent(html_65c99b40a0aa5b7d1ac56b91b7d419ba);
+            
+        
+
+        marker_bf51a622580d5df0524a904642e8d81c.bindPopup(popup_36815e7a3222ac7b805505346462cccc)
+        ;
+
+        
+    
+    
+                marker_bf51a622580d5df0524a904642e8d81c.setIcon(icon_bca3bd8b4dcc96a67cf84cd2059b03dc);
+            
+    
+            var marker_6d7ad1d0a9d7e2e7c691dad266e9038a = L.marker(
+                [50.149325, 13.052281],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_01ed62cf3510b018cc030a9bf4a8a71b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a01c3c7316c03e15ce53cc8a9be6055b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_06724bb1725482630ef871f514d1a5b7 = $(`<div id="html_06724bb1725482630ef871f514d1a5b7" style="width: 100.0%; height: 100.0%;">ČS 115<br>Roční kontrola: 2024-11-09 00:00:00</div>`)[0];
+                popup_a01c3c7316c03e15ce53cc8a9be6055b.setContent(html_06724bb1725482630ef871f514d1a5b7);
+            
+        
+
+        marker_6d7ad1d0a9d7e2e7c691dad266e9038a.bindPopup(popup_a01c3c7316c03e15ce53cc8a9be6055b)
+        ;
+
+        
+    
+    
+                marker_6d7ad1d0a9d7e2e7c691dad266e9038a.setIcon(icon_01ed62cf3510b018cc030a9bf4a8a71b);
+            
+    
+            var marker_ee3f39d59c140478c6e1448f88e2cee1 = L.marker(
+                [49.6434, 13.1674331],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_ca67b0f1bfea29447c410c17f4035bf9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5a6aa842fd0b1171cb8f02d912a5002f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0dd4e52531d8ad5ff798f7b7b8b47d22 = $(`<div id="html_0dd4e52531d8ad5ff798f7b7b8b47d22" style="width: 100.0%; height: 100.0%;">ČS 125<br>Roční kontrola: 2024-11-10 00:00:00</div>`)[0];
+                popup_5a6aa842fd0b1171cb8f02d912a5002f.setContent(html_0dd4e52531d8ad5ff798f7b7b8b47d22);
+            
+        
+
+        marker_ee3f39d59c140478c6e1448f88e2cee1.bindPopup(popup_5a6aa842fd0b1171cb8f02d912a5002f)
+        ;
+
+        
+    
+    
+                marker_ee3f39d59c140478c6e1448f88e2cee1.setIcon(icon_ca67b0f1bfea29447c410c17f4035bf9);
+            
+    
+            var marker_9a7d89039eba130a1a1d2056c149d589 = L.marker(
+                [48.989478, 14.45925],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_def6381a3261f847e5c50a0d3361abfa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f8b8c21339d5837ba1cad175c3c26ea5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_860912db4d95ac9fe672d8a53843f055 = $(`<div id="html_860912db4d95ac9fe672d8a53843f055" style="width: 100.0%; height: 100.0%;">ČS 161<br>Roční kontrola: 2024-11-11 00:00:00</div>`)[0];
+                popup_f8b8c21339d5837ba1cad175c3c26ea5.setContent(html_860912db4d95ac9fe672d8a53843f055);
+            
+        
+
+        marker_9a7d89039eba130a1a1d2056c149d589.bindPopup(popup_f8b8c21339d5837ba1cad175c3c26ea5)
+        ;
+
+        
+    
+    
+                marker_9a7d89039eba130a1a1d2056c149d589.setIcon(icon_def6381a3261f847e5c50a0d3361abfa);
+            
+    
+            var marker_fced6dec020708b15d2d1a12fe55be94 = L.marker(
+                [49.0668604, 13.7819674],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_46da3eca529e8b645db299a61fd0eae5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c316d8f66a2be84c5f0b42c6c0e2e36e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5d62f98650382cf88c9736e29d8d0551 = $(`<div id="html_5d62f98650382cf88c9736e29d8d0551" style="width: 100.0%; height: 100.0%;">ČS 191<br>Roční kontrola: 2024-11-12 00:00:00</div>`)[0];
+                popup_c316d8f66a2be84c5f0b42c6c0e2e36e.setContent(html_5d62f98650382cf88c9736e29d8d0551);
+            
+        
+
+        marker_fced6dec020708b15d2d1a12fe55be94.bindPopup(popup_c316d8f66a2be84c5f0b42c6c0e2e36e)
+        ;
+
+        
+    
+    
+                marker_fced6dec020708b15d2d1a12fe55be94.setIcon(icon_46da3eca529e8b645db299a61fd0eae5);
+            
+    
+            var marker_ce0c58ae4617727831ba19bb02a8a934 = L.marker(
+                [49.5021678, 14.1585539],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_6fe6b5644923c625d95db64b300d4960 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fa94acf2e99a5a87934ea2bd9df24b12 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff5fc065ab67b04096b89e34815f2f83 = $(`<div id="html_ff5fc065ab67b04096b89e34815f2f83" style="width: 100.0%; height: 100.0%;">ČS 194<br>Roční kontrola: 2024-11-13 00:00:00</div>`)[0];
+                popup_fa94acf2e99a5a87934ea2bd9df24b12.setContent(html_ff5fc065ab67b04096b89e34815f2f83);
+            
+        
+
+        marker_ce0c58ae4617727831ba19bb02a8a934.bindPopup(popup_fa94acf2e99a5a87934ea2bd9df24b12)
+        ;
+
+        
+    
+    
+                marker_ce0c58ae4617727831ba19bb02a8a934.setIcon(icon_6fe6b5644923c625d95db64b300d4960);
+            
+    
+            var marker_0fe80d0e87575e4b2d5f4c540673ea58 = L.marker(
+                [49.135677, 15.0185587],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_1aad16bccc6b5c0fad14a19d257d8776 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e76ca41e1541d45f1f8603c59ccc78c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b4308450d05e805be4a899dd7ef7daf = $(`<div id="html_9b4308450d05e805be4a899dd7ef7daf" style="width: 100.0%; height: 100.0%;">ČS 177<br>Roční kontrola: 2024-11-14 00:00:00</div>`)[0];
+                popup_e76ca41e1541d45f1f8603c59ccc78c2.setContent(html_9b4308450d05e805be4a899dd7ef7daf);
+            
+        
+
+        marker_0fe80d0e87575e4b2d5f4c540673ea58.bindPopup(popup_e76ca41e1541d45f1f8603c59ccc78c2)
+        ;
+
+        
+    
+    
+                marker_0fe80d0e87575e4b2d5f4c540673ea58.setIcon(icon_1aad16bccc6b5c0fad14a19d257d8776);
+            
+    
+            var marker_49940f303b186d24dd4e48686324eba5 = L.marker(
+                [49.0013589, 14.0116933],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_0131cd12dd8cb5e17e71379e882ee259 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2c2038f43329d7f30378e5f8125d9f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c4f18b27097eebcb71f444d623aa80f9 = $(`<div id="html_c4f18b27097eebcb71f444d623aa80f9" style="width: 100.0%; height: 100.0%;">ČS 180<br>Roční kontrola: 2024-11-15 00:00:00</div>`)[0];
+                popup_d2c2038f43329d7f30378e5f8125d9f5.setContent(html_c4f18b27097eebcb71f444d623aa80f9);
+            
+        
+
+        marker_49940f303b186d24dd4e48686324eba5.bindPopup(popup_d2c2038f43329d7f30378e5f8125d9f5)
+        ;
+
+        
+    
+    
+                marker_49940f303b186d24dd4e48686324eba5.setIcon(icon_0131cd12dd8cb5e17e71379e882ee259);
+            
+    
+            var marker_473573a26e579582f3962ddeb1dc0839 = L.marker(
+                [48.935163, 13.765625],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_dedadf113a605ee08f1caa6937c8745f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_20f02f7e85dc8c7dcacf004db074ff6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44d95069db7701ec84d5f660b4c583ff = $(`<div id="html_44d95069db7701ec84d5f660b4c583ff" style="width: 100.0%; height: 100.0%;">ČS 174<br>Roční kontrola: 2024-11-19 00:00:00</div>`)[0];
+                popup_20f02f7e85dc8c7dcacf004db074ff6d.setContent(html_44d95069db7701ec84d5f660b4c583ff);
+            
+        
+
+        marker_473573a26e579582f3962ddeb1dc0839.bindPopup(popup_20f02f7e85dc8c7dcacf004db074ff6d)
+        ;
+
+        
+    
+    
+                marker_473573a26e579582f3962ddeb1dc0839.setIcon(icon_dedadf113a605ee08f1caa6937c8745f);
+            
+    
+            var marker_d8049e19e35259bbd2741ada89ba6389 = L.marker(
+                [49.395028, 14.687889],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_3ae812592dc19f4bf0f3e137cf3cadb0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8a5b4d58df2ede65a9d15187f24b5c03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c5f56691f3c0f3969d64d9a307094085 = $(`<div id="html_c5f56691f3c0f3969d64d9a307094085" style="width: 100.0%; height: 100.0%;">ČS 186<br>Roční kontrola: 2024-11-29 00:00:00</div>`)[0];
+                popup_8a5b4d58df2ede65a9d15187f24b5c03.setContent(html_c5f56691f3c0f3969d64d9a307094085);
+            
+        
+
+        marker_d8049e19e35259bbd2741ada89ba6389.bindPopup(popup_8a5b4d58df2ede65a9d15187f24b5c03)
+        ;
+
+        
+    
+    
+                marker_d8049e19e35259bbd2741ada89ba6389.setIcon(icon_3ae812592dc19f4bf0f3e137cf3cadb0);
+            
+    
+            var marker_abb97b1e50fd8ee9c6fd4868b03fe92c = L.marker(
+                [49.654365, 13.291583],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_03a06ca54f58ebd78a915960d99e26c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c01ef11549865ae4d36c2a9e2ab0ee17 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_213bbb5dde83972ee11abf8c05592a40 = $(`<div id="html_213bbb5dde83972ee11abf8c05592a40" style="width: 100.0%; height: 100.0%;">ČS 126<br>Roční kontrola: 2024-11-30 00:00:00</div>`)[0];
+                popup_c01ef11549865ae4d36c2a9e2ab0ee17.setContent(html_213bbb5dde83972ee11abf8c05592a40);
+            
+        
+
+        marker_abb97b1e50fd8ee9c6fd4868b03fe92c.bindPopup(popup_c01ef11549865ae4d36c2a9e2ab0ee17)
+        ;
+
+        
+    
+    
+                marker_abb97b1e50fd8ee9c6fd4868b03fe92c.setIcon(icon_03a06ca54f58ebd78a915960d99e26c7);
+            
+    
+            var marker_9e3ce5928071cf4acae122c2017ce6c3 = L.marker(
+                [49.3849258, 13.2964278],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_25ef1e6852bef31bcdc7f6e6142090cd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99ae1748571bff469ed7219ed3ba890e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_077353c7cbc9e0a4204de1774c190354 = $(`<div id="html_077353c7cbc9e0a4204de1774c190354" style="width: 100.0%; height: 100.0%;">ČS 151<br>Roční kontrola: 2024-11-30 00:00:00</div>`)[0];
+                popup_99ae1748571bff469ed7219ed3ba890e.setContent(html_077353c7cbc9e0a4204de1774c190354);
+            
+        
+
+        marker_9e3ce5928071cf4acae122c2017ce6c3.bindPopup(popup_99ae1748571bff469ed7219ed3ba890e)
+        ;
+
+        
+    
+    
+                marker_9e3ce5928071cf4acae122c2017ce6c3.setIcon(icon_25ef1e6852bef31bcdc7f6e6142090cd);
+            
+    
+            var marker_0b38f0bd066ea739eb05ddb447e50b2c = L.marker(
+                [49.274734, 13.068513],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_fc30cf3262c88d3dd9c312dfde5d03f0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8636d185103feb595e11409a4456ef04 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0bf91766c5b242ab5f8d96edd8335b2d = $(`<div id="html_0bf91766c5b242ab5f8d96edd8335b2d" style="width: 100.0%; height: 100.0%;">ČS 154<br>Roční kontrola: 2024-12-05 00:00:00</div>`)[0];
+                popup_8636d185103feb595e11409a4456ef04.setContent(html_0bf91766c5b242ab5f8d96edd8335b2d);
+            
+        
+
+        marker_0b38f0bd066ea739eb05ddb447e50b2c.bindPopup(popup_8636d185103feb595e11409a4456ef04)
+        ;
+
+        
+    
+    
+                marker_0b38f0bd066ea739eb05ddb447e50b2c.setIcon(icon_fc30cf3262c88d3dd9c312dfde5d03f0);
+            
+    
+            var marker_fd2d1201935644ba275081f695c2b280 = L.marker(
+                [49.8981197, 13.3770075],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_dd575d8a714b0ff3eaa8f15eacee9ebf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a9caa5ad1c064fe5a2304c656bd64102 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e740dd33d680b4882056fa6eb10ec1b = $(`<div id="html_1e740dd33d680b4882056fa6eb10ec1b" style="width: 100.0%; height: 100.0%;">ČS 150<br>Roční kontrola: 2024-12-06 00:00:00</div>`)[0];
+                popup_a9caa5ad1c064fe5a2304c656bd64102.setContent(html_1e740dd33d680b4882056fa6eb10ec1b);
+            
+        
+
+        marker_fd2d1201935644ba275081f695c2b280.bindPopup(popup_a9caa5ad1c064fe5a2304c656bd64102)
+        ;
+
+        
+    
+    
+                marker_fd2d1201935644ba275081f695c2b280.setIcon(icon_dd575d8a714b0ff3eaa8f15eacee9ebf);
+            
+    
+            var marker_b0112e96846732c40a16d9dae1080293 = L.marker(
+                [50.2399, 12.754947],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_48e33bcfa8bb85dcb6793fbe62d64ede = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c6018cc574958d4f5a2033e1289a9979 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f30a3307bf23eda8a199c2b241ed5bfd = $(`<div id="html_f30a3307bf23eda8a199c2b241ed5bfd" style="width: 100.0%; height: 100.0%;">ČS 108<br>Roční kontrola: 2024-12-07 00:00:00</div>`)[0];
+                popup_c6018cc574958d4f5a2033e1289a9979.setContent(html_f30a3307bf23eda8a199c2b241ed5bfd);
+            
+        
+
+        marker_b0112e96846732c40a16d9dae1080293.bindPopup(popup_c6018cc574958d4f5a2033e1289a9979)
+        ;
+
+        
+    
+    
+                marker_b0112e96846732c40a16d9dae1080293.setIcon(icon_48e33bcfa8bb85dcb6793fbe62d64ede);
+            
+    
+            var marker_5fd56b9104bcc3f201852f5e9ae9dee0 = L.marker(
+                [50.185019, 12.694227],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_41a85a2f11f55963dac8b87302aa401d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b8594ca870dc0be3de9964d374d123aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a79e9e8c1b447067c157f3e4ec71418 = $(`<div id="html_0a79e9e8c1b447067c157f3e4ec71418" style="width: 100.0%; height: 100.0%;">ČS 111<br>Roční kontrola: 2024-12-07 00:00:00</div>`)[0];
+                popup_b8594ca870dc0be3de9964d374d123aa.setContent(html_0a79e9e8c1b447067c157f3e4ec71418);
+            
+        
+
+        marker_5fd56b9104bcc3f201852f5e9ae9dee0.bindPopup(popup_b8594ca870dc0be3de9964d374d123aa)
+        ;
+
+        
+    
+    
+                marker_5fd56b9104bcc3f201852f5e9ae9dee0.setIcon(icon_41a85a2f11f55963dac8b87302aa401d);
+            
+    
+            var marker_a507380d2fe047153e66fb0250f74175 = L.marker(
+                [50.316522, 12.751999],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_9e0d6c72498c091133b94a86da4a22f1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c91ca7fabf01378b955263562aebe58 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3fc4064a0ce413230ad5403e8c959878 = $(`<div id="html_3fc4064a0ce413230ad5403e8c959878" style="width: 100.0%; height: 100.0%;">ČS 109<br>Roční kontrola: 2024-12-08 00:00:00</div>`)[0];
+                popup_1c91ca7fabf01378b955263562aebe58.setContent(html_3fc4064a0ce413230ad5403e8c959878);
+            
+        
+
+        marker_a507380d2fe047153e66fb0250f74175.bindPopup(popup_1c91ca7fabf01378b955263562aebe58)
+        ;
+
+        
+    
+    
+                marker_a507380d2fe047153e66fb0250f74175.setIcon(icon_9e0d6c72498c091133b94a86da4a22f1);
+            
+    
+            var marker_90c26d9cbcf425aa3e02babfb2676d5f = L.marker(
+                [50.316682, 12.945439],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_5497b123413ef2810ef8b6f664fcbf38 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_825c895bcff11403003ca23a25c7c8a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e7dd0b3e1b281570955cc903e7b4f4de = $(`<div id="html_e7dd0b3e1b281570955cc903e7b4f4de" style="width: 100.0%; height: 100.0%;">ČS 110<br>Roční kontrola: 2024-12-08 00:00:00</div>`)[0];
+                popup_825c895bcff11403003ca23a25c7c8a6.setContent(html_e7dd0b3e1b281570955cc903e7b4f4de);
+            
+        
+
+        marker_90c26d9cbcf425aa3e02babfb2676d5f.bindPopup(popup_825c895bcff11403003ca23a25c7c8a6)
+        ;
+
+        
+    
+    
+                marker_90c26d9cbcf425aa3e02babfb2676d5f.setIcon(icon_5497b123413ef2810ef8b6f664fcbf38);
+            
+    
+            var marker_190057b6ec1abbbd5fa21751bb188676 = L.marker(
+                [49.324816, 13.68733],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_59f8eaaa3d3cb81c267700dd03724fa6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb1f86a8406980a568aa94aaa0c888d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34b1ba17887e8476a653b039e65e4a9a = $(`<div id="html_34b1ba17887e8476a653b039e65e4a9a" style="width: 100.0%; height: 100.0%;">ČS 149<br>Roční kontrola: 2024-12-12 00:00:00</div>`)[0];
+                popup_fb1f86a8406980a568aa94aaa0c888d7.setContent(html_34b1ba17887e8476a653b039e65e4a9a);
+            
+        
+
+        marker_190057b6ec1abbbd5fa21751bb188676.bindPopup(popup_fb1f86a8406980a568aa94aaa0c888d7)
+        ;
+
+        
+    
+    
+                marker_190057b6ec1abbbd5fa21751bb188676.setIcon(icon_59f8eaaa3d3cb81c267700dd03724fa6);
+            
+    
+            var marker_a6ed5436389faf57438657afba29e4a5 = L.marker(
+                [49.64543, 13.5093319],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_cdb48cc40e60c5e32dc154a6e1cfd8c3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9fbecb7bf477c6b5ff2b8eeeee5c59e1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9e557f4267aebb7625ae253e49df0a64 = $(`<div id="html_9e557f4267aebb7625ae253e49df0a64" style="width: 100.0%; height: 100.0%;">ČS 156<br>Roční kontrola: 2024-12-12 00:00:00</div>`)[0];
+                popup_9fbecb7bf477c6b5ff2b8eeeee5c59e1.setContent(html_9e557f4267aebb7625ae253e49df0a64);
+            
+        
+
+        marker_a6ed5436389faf57438657afba29e4a5.bindPopup(popup_9fbecb7bf477c6b5ff2b8eeeee5c59e1)
+        ;
+
+        
+    
+    
+                marker_a6ed5436389faf57438657afba29e4a5.setIcon(icon_cdb48cc40e60c5e32dc154a6e1cfd8c3);
+            
+    
+            var marker_261da97908801f22253d1e31607f8ebf = L.marker(
+                [49.7441097, 13.6086025],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_093b4191662c9c371fe8d8fe1d056532 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_056a7313a8b018f9f6617c07cc986573 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_366aa42865684a84f423cb11453ebad2 = $(`<div id="html_366aa42865684a84f423cb11453ebad2" style="width: 100.0%; height: 100.0%;">ČS 135<br>Roční kontrola: 2024-12-13 00:00:00</div>`)[0];
+                popup_056a7313a8b018f9f6617c07cc986573.setContent(html_366aa42865684a84f423cb11453ebad2);
+            
+        
+
+        marker_261da97908801f22253d1e31607f8ebf.bindPopup(popup_056a7313a8b018f9f6617c07cc986573)
+        ;
+
+        
+    
+    
+                marker_261da97908801f22253d1e31607f8ebf.setIcon(icon_093b4191662c9c371fe8d8fe1d056532);
+            
+    
+            var marker_6234d33c761d65ce80b815fb8ac5242f = L.marker(
+                [49.6783431, 13.3308944],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_3e242ed8c7b52fbce8f097ddfe2ca24e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_45ec474d717178042edfb55d43ca36d9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1b01f17b19b9bfa2a292408e35df56e1 = $(`<div id="html_1b01f17b19b9bfa2a292408e35df56e1" style="width: 100.0%; height: 100.0%;">ČS 195<br>Roční kontrola: 2024-12-13 00:00:00</div>`)[0];
+                popup_45ec474d717178042edfb55d43ca36d9.setContent(html_1b01f17b19b9bfa2a292408e35df56e1);
+            
+        
+
+        marker_6234d33c761d65ce80b815fb8ac5242f.bindPopup(popup_45ec474d717178042edfb55d43ca36d9)
+        ;
+
+        
+    
+    
+                marker_6234d33c761d65ce80b815fb8ac5242f.setIcon(icon_3e242ed8c7b52fbce8f097ddfe2ca24e);
+            
+    
+            var marker_619a36c3cea9b6717a57663e4a7dc397 = L.marker(
+                [49.6765552, 13.3246828],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_f84d0621b70444bb5b48fbca71741ff7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7455f4daeb20939f417f115f23e162d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2e655845ba4aeb67d87b7b162bcde9f0 = $(`<div id="html_2e655845ba4aeb67d87b7b162bcde9f0" style="width: 100.0%; height: 100.0%;">ČS 196<br>Roční kontrola: 2024-12-13 00:00:00</div>`)[0];
+                popup_7455f4daeb20939f417f115f23e162d6.setContent(html_2e655845ba4aeb67d87b7b162bcde9f0);
+            
+        
+
+        marker_619a36c3cea9b6717a57663e4a7dc397.bindPopup(popup_7455f4daeb20939f417f115f23e162d6)
+        ;
+
+        
+    
+    
+                marker_619a36c3cea9b6717a57663e4a7dc397.setIcon(icon_f84d0621b70444bb5b48fbca71741ff7);
+            
+    
+            var marker_0b8705def752f4638c01c317c36d3616 = L.marker(
+                [50.1225719, 12.3684631],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_08fcb446cc6524a9115e8e30494b8a38 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f555402ce249e6df1fed4119e78b507e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46e9ecb4c4e5350c3886c13127426b04 = $(`<div id="html_46e9ecb4c4e5350c3886c13127426b04" style="width: 100.0%; height: 100.0%;">ČS 101<br>Roční kontrola: 2024-12-14 00:00:00</div>`)[0];
+                popup_f555402ce249e6df1fed4119e78b507e.setContent(html_46e9ecb4c4e5350c3886c13127426b04);
+            
+        
+
+        marker_0b8705def752f4638c01c317c36d3616.bindPopup(popup_f555402ce249e6df1fed4119e78b507e)
+        ;
+
+        
+    
+    
+                marker_0b8705def752f4638c01c317c36d3616.setIcon(icon_08fcb446cc6524a9115e8e30494b8a38);
+            
+    
+            var marker_e74dbf94fd196fbc4d3e053ea0a38bd2 = L.marker(
+                [49.7896447, 12.651305],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_086b84218b9d48df438974930e9616a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_057d0e18456e6b8f064786f9ad48ff50 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f914e016090d9e486e0a78856a71f35 = $(`<div id="html_2f914e016090d9e486e0a78856a71f35" style="width: 100.0%; height: 100.0%;">ČS 104<br>Roční kontrola: 2024-12-14 00:00:00</div>`)[0];
+                popup_057d0e18456e6b8f064786f9ad48ff50.setContent(html_2f914e016090d9e486e0a78856a71f35);
+            
+        
+
+        marker_e74dbf94fd196fbc4d3e053ea0a38bd2.bindPopup(popup_057d0e18456e6b8f064786f9ad48ff50)
+        ;
+
+        
+    
+    
+                marker_e74dbf94fd196fbc4d3e053ea0a38bd2.setIcon(icon_086b84218b9d48df438974930e9616a2);
+            
+    
+            var marker_375cc555efe801c5703f36206b98d8d1 = L.marker(
+                [49.6748608, 12.6744814],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_e512373af0ddb75e4557e5595bbee571 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_57c01525531157a929784a800fb73ea1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df0f66c92de58e3baa091fdc95fffe67 = $(`<div id="html_df0f66c92de58e3baa091fdc95fffe67" style="width: 100.0%; height: 100.0%;">ČS 105<br>Roční kontrola: 2024-12-14 00:00:00</div>`)[0];
+                popup_57c01525531157a929784a800fb73ea1.setContent(html_df0f66c92de58e3baa091fdc95fffe67);
+            
+        
+
+        marker_375cc555efe801c5703f36206b98d8d1.bindPopup(popup_57c01525531157a929784a800fb73ea1)
+        ;
+
+        
+    
+    
+                marker_375cc555efe801c5703f36206b98d8d1.setIcon(icon_e512373af0ddb75e4557e5595bbee571);
+            
+    
+            var marker_1b09adf647b9d7103464b0d263a7ada4 = L.marker(
+                [49.708925, 12.781377],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_8a04f2bc3423935348e12950056cb98b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9bfc961e48c56761f58c5cc35a14abd4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c1768e32f2859c7cfa43762cff59163 = $(`<div id="html_3c1768e32f2859c7cfa43762cff59163" style="width: 100.0%; height: 100.0%;">ČS 106<br>Roční kontrola: 2024-12-14 00:00:00</div>`)[0];
+                popup_9bfc961e48c56761f58c5cc35a14abd4.setContent(html_3c1768e32f2859c7cfa43762cff59163);
+            
+        
+
+        marker_1b09adf647b9d7103464b0d263a7ada4.bindPopup(popup_9bfc961e48c56761f58c5cc35a14abd4)
+        ;
+
+        
+    
+    
+                marker_1b09adf647b9d7103464b0d263a7ada4.setIcon(icon_8a04f2bc3423935348e12950056cb98b);
+            
+    
+            var marker_c2401332d87f4b19201f69da789be934 = L.marker(
+                [50.06051, 12.977748],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_a46eb6857619b8a8be2369499396d49a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6054a865ac003d5770219f95d500b3d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f647b59b5274ac632b34ee4f0fd03cf = $(`<div id="html_5f647b59b5274ac632b34ee4f0fd03cf" style="width: 100.0%; height: 100.0%;">ČS 112<br>Roční kontrola: 2024-12-14 00:00:00</div>`)[0];
+                popup_6054a865ac003d5770219f95d500b3d1.setContent(html_5f647b59b5274ac632b34ee4f0fd03cf);
+            
+        
+
+        marker_c2401332d87f4b19201f69da789be934.bindPopup(popup_6054a865ac003d5770219f95d500b3d1)
+        ;
+
+        
+    
+    
+                marker_c2401332d87f4b19201f69da789be934.setIcon(icon_a46eb6857619b8a8be2369499396d49a);
+            
+    
+            var marker_cdd394f1a830680d3594fa1a6a171afc = L.marker(
+                [50.0728122, 12.3611508],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_4f08eb003c251243301b1c573a13b28b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c9a8f19956950081f2ad523bd7030528 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57417d48d0e3d8ec5493f71c1a91775f = $(`<div id="html_57417d48d0e3d8ec5493f71c1a91775f" style="width: 100.0%; height: 100.0%;">ČS 119<br>Roční kontrola: 2024-12-14 00:00:00</div>`)[0];
+                popup_c9a8f19956950081f2ad523bd7030528.setContent(html_57417d48d0e3d8ec5493f71c1a91775f);
+            
+        
+
+        marker_cdd394f1a830680d3594fa1a6a171afc.bindPopup(popup_c9a8f19956950081f2ad523bd7030528)
+        ;
+
+        
+    
+    
+                marker_cdd394f1a830680d3594fa1a6a171afc.setIcon(icon_4f08eb003c251243301b1c573a13b28b);
+            
+    
+            var marker_c7636c9294362d9e45c087279538489e = L.marker(
+                [50.1006675, 12.38567],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_ecbea1e61bfba0416cf4a9c0a450afb0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cb72b68df18da92c0e2dad08829882be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e3bdfab260a9f7d205354ca7b1d8e2b = $(`<div id="html_8e3bdfab260a9f7d205354ca7b1d8e2b" style="width: 100.0%; height: 100.0%;">ČS 103<br>Roční kontrola: 2024-12-15 00:00:00</div>`)[0];
+                popup_cb72b68df18da92c0e2dad08829882be.setContent(html_8e3bdfab260a9f7d205354ca7b1d8e2b);
+            
+        
+
+        marker_c7636c9294362d9e45c087279538489e.bindPopup(popup_cb72b68df18da92c0e2dad08829882be)
+        ;
+
+        
+    
+    
+                marker_c7636c9294362d9e45c087279538489e.setIcon(icon_ecbea1e61bfba0416cf4a9c0a450afb0);
+            
+    
+            var marker_7eefaf14c32d735ae948d543a5414a5b = L.marker(
+                [50.084093, 12.372333],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_05bc229befe05bb5a8c71803c1760110 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b75988b10c0bf2ecc1e53bafa4974fe8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_088f17c76f6dc20e4f2ccd5736ebc390 = $(`<div id="html_088f17c76f6dc20e4f2ccd5736ebc390" style="width: 100.0%; height: 100.0%;">ČS 113<br>Roční kontrola: 2024-12-15 00:00:00</div>`)[0];
+                popup_b75988b10c0bf2ecc1e53bafa4974fe8.setContent(html_088f17c76f6dc20e4f2ccd5736ebc390);
+            
+        
+
+        marker_7eefaf14c32d735ae948d543a5414a5b.bindPopup(popup_b75988b10c0bf2ecc1e53bafa4974fe8)
+        ;
+
+        
+    
+    
+                marker_7eefaf14c32d735ae948d543a5414a5b.setIcon(icon_05bc229befe05bb5a8c71803c1760110);
+            
+    
+            var marker_980c2b074c7f36eb018c55e3e118899b = L.marker(
+                [50.0923781, 12.4637386],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_728dcfd1c26526ea3c534b4e4e13e4b1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9d749e1b58536358312e8f55fcf922e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab0aa77cdffb8362f84f7f4555b1ce57 = $(`<div id="html_ab0aa77cdffb8362f84f7f4555b1ce57" style="width: 100.0%; height: 100.0%;">ČS 140<br>Roční kontrola: 2024-12-15 00:00:00</div>`)[0];
+                popup_9d749e1b58536358312e8f55fcf922e3.setContent(html_ab0aa77cdffb8362f84f7f4555b1ce57);
+            
+        
+
+        marker_980c2b074c7f36eb018c55e3e118899b.bindPopup(popup_9d749e1b58536358312e8f55fcf922e3)
+        ;
+
+        
+    
+    
+                marker_980c2b074c7f36eb018c55e3e118899b.setIcon(icon_728dcfd1c26526ea3c534b4e4e13e4b1);
+            
+    
+            var marker_5ba653d1c4751c7bb1630e97d51646c3 = L.marker(
+                [49.7513409, 12.9855426],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_763acd9314fc1125832f301886b4eb52 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4f58b22f81f99719d6ce482d9791d7e7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9880b00ecbfcf371145b357704d72722 = $(`<div id="html_9880b00ecbfcf371145b357704d72722" style="width: 100.0%; height: 100.0%;">ČS 160<br>Roční kontrola: 2024-12-15 00:00:00</div>`)[0];
+                popup_4f58b22f81f99719d6ce482d9791d7e7.setContent(html_9880b00ecbfcf371145b357704d72722);
+            
+        
+
+        marker_5ba653d1c4751c7bb1630e97d51646c3.bindPopup(popup_4f58b22f81f99719d6ce482d9791d7e7)
+        ;
+
+        
+    
+    
+                marker_5ba653d1c4751c7bb1630e97d51646c3.setIcon(icon_763acd9314fc1125832f301886b4eb52);
+            
+    
+            var marker_cc38c44c0945ea8f454f70ca172ac281 = L.marker(
+                [49.70317, 12.9871269],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_03a829965065d81dc361136de912293c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9174d503b3137ff8f65950aef3ca0c55 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e35fcb97bd98a7ad65286b6ed864f43 = $(`<div id="html_0e35fcb97bd98a7ad65286b6ed864f43" style="width: 100.0%; height: 100.0%;">ČS 193<br>Roční kontrola: 2024-12-15 00:00:00</div>`)[0];
+                popup_9174d503b3137ff8f65950aef3ca0c55.setContent(html_0e35fcb97bd98a7ad65286b6ed864f43);
+            
+        
+
+        marker_cc38c44c0945ea8f454f70ca172ac281.bindPopup(popup_9174d503b3137ff8f65950aef3ca0c55)
+        ;
+
+        
+    
+    
+                marker_cc38c44c0945ea8f454f70ca172ac281.setIcon(icon_03a829965065d81dc361136de912293c);
+            
+    
+            var marker_1477589e0c60dbf0419e954245c9c940 = L.marker(
+                [49.4372717, 12.9118335],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_83c89c61104103dc80e399406c1c376c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_167b8a03987a84a9b520e963256a48ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff40190960aaa6ffc80e2472638d7e6a = $(`<div id="html_ff40190960aaa6ffc80e2472638d7e6a" style="width: 100.0%; height: 100.0%;">ČS 120<br>Roční kontrola: 2024-12-16 00:00:00</div>`)[0];
+                popup_167b8a03987a84a9b520e963256a48ae.setContent(html_ff40190960aaa6ffc80e2472638d7e6a);
+            
+        
+
+        marker_1477589e0c60dbf0419e954245c9c940.bindPopup(popup_167b8a03987a84a9b520e963256a48ae)
+        ;
+
+        
+    
+    
+                marker_1477589e0c60dbf0419e954245c9c940.setIcon(icon_83c89c61104103dc80e399406c1c376c);
+            
+    
+            var marker_d544a47b575613126af4cc74dbbf53b2 = L.marker(
+                [49.3921014, 13.0288997],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_eb64fe9bc5bb9f3de6540502b2c52e5e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e59f02bca889aaeb5c608928fc073aa8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9f5fecadd77cf0c8135cd608da8bc9a = $(`<div id="html_a9f5fecadd77cf0c8135cd608da8bc9a" style="width: 100.0%; height: 100.0%;">ČS 121<br>Roční kontrola: 2024-12-16 00:00:00</div>`)[0];
+                popup_e59f02bca889aaeb5c608928fc073aa8.setContent(html_a9f5fecadd77cf0c8135cd608da8bc9a);
+            
+        
+
+        marker_d544a47b575613126af4cc74dbbf53b2.bindPopup(popup_e59f02bca889aaeb5c608928fc073aa8)
+        ;
+
+        
+    
+    
+                marker_d544a47b575613126af4cc74dbbf53b2.setIcon(icon_eb64fe9bc5bb9f3de6540502b2c52e5e);
+            
+    
+            var marker_c1219a0b712b7511fab9dd0fbed0cc70 = L.marker(
+                [49.3493806, 12.8545028],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_307bcb31b6427aa75f3a477ee40e810f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3f0b56d944fb56c570cbf4043ffc604a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_032e93674995c10edcfcb6336ac11711 = $(`<div id="html_032e93674995c10edcfcb6336ac11711" style="width: 100.0%; height: 100.0%;">ČS 141<br>Roční kontrola: 2024-12-16 00:00:00</div>`)[0];
+                popup_3f0b56d944fb56c570cbf4043ffc604a.setContent(html_032e93674995c10edcfcb6336ac11711);
+            
+        
+
+        marker_c1219a0b712b7511fab9dd0fbed0cc70.bindPopup(popup_3f0b56d944fb56c570cbf4043ffc604a)
+        ;
+
+        
+    
+    
+                marker_c1219a0b712b7511fab9dd0fbed0cc70.setIcon(icon_307bcb31b6427aa75f3a477ee40e810f);
+            
+    
+            var marker_684286806fb73e7c5c33c0da3d848ba9 = L.marker(
+                [49.392693, 13.024547],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_960a581c11d81e0a32226b33bcfeb5f3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29e0b068e2ae6d1b574ba539f10d3b10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c1d74ec155b82b357e4a38eba3479056 = $(`<div id="html_c1d74ec155b82b357e4a38eba3479056" style="width: 100.0%; height: 100.0%;">ČS 157<br>Roční kontrola: 2024-12-16 00:00:00</div>`)[0];
+                popup_29e0b068e2ae6d1b574ba539f10d3b10.setContent(html_c1d74ec155b82b357e4a38eba3479056);
+            
+        
+
+        marker_684286806fb73e7c5c33c0da3d848ba9.bindPopup(popup_29e0b068e2ae6d1b574ba539f10d3b10)
+        ;
+
+        
+    
+    
+                marker_684286806fb73e7c5c33c0da3d848ba9.setIcon(icon_960a581c11d81e0a32226b33bcfeb5f3);
+            
+    
+            var marker_bfe2e0db4b125fb408c7ac4504e6e542 = L.marker(
+                [49.4086333, 13.2941819],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_c5c47a11f52d0a740db6eeba845384c3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_88a3ff1adafb1f36974e55893f2a3d9a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b24ec989693fb158dea61a7bf1eb0431 = $(`<div id="html_b24ec989693fb158dea61a7bf1eb0431" style="width: 100.0%; height: 100.0%;">ČS 127<br>Roční kontrola: 2024-12-17 00:00:00</div>`)[0];
+                popup_88a3ff1adafb1f36974e55893f2a3d9a.setContent(html_b24ec989693fb158dea61a7bf1eb0431);
+            
+        
+
+        marker_bfe2e0db4b125fb408c7ac4504e6e542.bindPopup(popup_88a3ff1adafb1f36974e55893f2a3d9a)
+        ;
+
+        
+    
+    
+                marker_bfe2e0db4b125fb408c7ac4504e6e542.setIcon(icon_c5c47a11f52d0a740db6eeba845384c3);
+            
+    
+            var marker_902cbd7ef2151e575b63ebe22b42750e = L.marker(
+                [48.8968067, 14.8810225],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_a996b3163a58e85efb472d9e3985de98 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b20034bfc3dcf653665122d93b4a2506 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b7cd35eecfe2886db7985e5e24fe2429 = $(`<div id="html_b7cd35eecfe2886db7985e5e24fe2429" style="width: 100.0%; height: 100.0%;">ČS 171<br>Roční kontrola: 2024-12-19 00:00:00</div>`)[0];
+                popup_b20034bfc3dcf653665122d93b4a2506.setContent(html_b7cd35eecfe2886db7985e5e24fe2429);
+            
+        
+
+        marker_902cbd7ef2151e575b63ebe22b42750e.bindPopup(popup_b20034bfc3dcf653665122d93b4a2506)
+        ;
+
+        
+    
+    
+                marker_902cbd7ef2151e575b63ebe22b42750e.setIcon(icon_a996b3163a58e85efb472d9e3985de98);
+            
+    
+            var marker_c57364e9e804c2162fd01d9a885a4f77 = L.marker(
+                [48.770475, 14.9579781],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_96fa89cd66dcbe1d135e221482931a18 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bfb932bc18a76a38092632daf1510b2f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_33bd1d6ef05112ed8f8f7a8c3f8d3d15 = $(`<div id="html_33bd1d6ef05112ed8f8f7a8c3f8d3d15" style="width: 100.0%; height: 100.0%;">ČS 181<br>Roční kontrola: 2024-12-21 00:00:00</div>`)[0];
+                popup_bfb932bc18a76a38092632daf1510b2f.setContent(html_33bd1d6ef05112ed8f8f7a8c3f8d3d15);
+            
+        
+
+        marker_c57364e9e804c2162fd01d9a885a4f77.bindPopup(popup_bfb932bc18a76a38092632daf1510b2f)
+        ;
+
+        
+    
+    
+                marker_c57364e9e804c2162fd01d9a885a4f77.setIcon(icon_96fa89cd66dcbe1d135e221482931a18);
+            
+    
+            var marker_269578c1f40cc9189a431da68a6a6155 = L.marker(
+                [49.012671, 14.004795],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_afa16da207673c08cca4731076a11b50 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5a460fd3f426333813febf68c5d30ff0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e72d1db392b24bfd8ab32df981c36ffe = $(`<div id="html_e72d1db392b24bfd8ab32df981c36ffe" style="width: 100.0%; height: 100.0%;">ČS 190<br>Roční kontrola: 2024-12-22 00:00:00</div>`)[0];
+                popup_5a460fd3f426333813febf68c5d30ff0.setContent(html_e72d1db392b24bfd8ab32df981c36ffe);
+            
+        
+
+        marker_269578c1f40cc9189a431da68a6a6155.bindPopup(popup_5a460fd3f426333813febf68c5d30ff0)
+        ;
+
+        
+    
+    
+                marker_269578c1f40cc9189a431da68a6a6155.setIcon(icon_afa16da207673c08cca4731076a11b50);
+            
+    
+            var marker_4f2b3f48afcc0b98244f955b4875bda5 = L.marker(
+                [50.2442937, 12.8991797],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_343f325ecfa19556255ff038ea9450ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_278bd098ca7900b5688320e37d36db73 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_296116fe56f4a7e43b388fd975fea4ed = $(`<div id="html_296116fe56f4a7e43b388fd975fea4ed" style="width: 100.0%; height: 100.0%;">ČS 114<br>Roční kontrola: NaT</div>`)[0];
+                popup_278bd098ca7900b5688320e37d36db73.setContent(html_296116fe56f4a7e43b388fd975fea4ed);
+            
+        
+
+        marker_4f2b3f48afcc0b98244f955b4875bda5.bindPopup(popup_278bd098ca7900b5688320e37d36db73)
+        ;
+
+        
+    
+    
+                marker_4f2b3f48afcc0b98244f955b4875bda5.setIcon(icon_343f325ecfa19556255ff038ea9450ec);
+            
+    
+            var marker_12bb4a53aca78d3890a5b2c5d76821de = L.marker(
+                [49.1389936, 13.2279977],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_3b0c236e4abd8c0c0397cfd2a1161ca7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e74b528fab7949250494671546c87cfc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2fc7cf532fdebccc5ef89692f7f8d803 = $(`<div id="html_2fc7cf532fdebccc5ef89692f7f8d803" style="width: 100.0%; height: 100.0%;">ČS 122<br>Roční kontrola: NaT</div>`)[0];
+                popup_e74b528fab7949250494671546c87cfc.setContent(html_2fc7cf532fdebccc5ef89692f7f8d803);
+            
+        
+
+        marker_12bb4a53aca78d3890a5b2c5d76821de.bindPopup(popup_e74b528fab7949250494671546c87cfc)
+        ;
+
+        
+    
+    
+                marker_12bb4a53aca78d3890a5b2c5d76821de.setIcon(icon_3b0c236e4abd8c0c0397cfd2a1161ca7);
+            
+    
+            var marker_be819919306d3122e2fd862b5b2b9542 = L.marker(
+                [49.806998, 12.6434996],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_a50d5300cc5ee6cff0ff5a0f3ae9b4b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_03b304eb47ba7e02b8aaf69ae52fe5d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12eb733b2b3eb16d64f7a8703bc567df = $(`<div id="html_12eb733b2b3eb16d64f7a8703bc567df" style="width: 100.0%; height: 100.0%;">ČS 138<br>Roční kontrola: NaT</div>`)[0];
+                popup_03b304eb47ba7e02b8aaf69ae52fe5d6.setContent(html_12eb733b2b3eb16d64f7a8703bc567df);
+            
+        
+
+        marker_be819919306d3122e2fd862b5b2b9542.bindPopup(popup_03b304eb47ba7e02b8aaf69ae52fe5d6)
+        ;
+
+        
+    
+    
+                marker_be819919306d3122e2fd862b5b2b9542.setIcon(icon_a50d5300cc5ee6cff0ff5a0f3ae9b4b4);
+            
+    
+            var marker_a1f4db3f20c13ec6d78a8c04d4ab78dc = L.marker(
+                [49.2542778, 13.5513906],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_f622acbface617c3257b56695f683391 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_85193dd60a4554a91d83442bd04c6773 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75297c2abde9d1ec6b5fc07b1d9718c0 = $(`<div id="html_75297c2abde9d1ec6b5fc07b1d9718c0" style="width: 100.0%; height: 100.0%;">ČS 139<br>Roční kontrola: NaT</div>`)[0];
+                popup_85193dd60a4554a91d83442bd04c6773.setContent(html_75297c2abde9d1ec6b5fc07b1d9718c0);
+            
+        
+
+        marker_a1f4db3f20c13ec6d78a8c04d4ab78dc.bindPopup(popup_85193dd60a4554a91d83442bd04c6773)
+        ;
+
+        
+    
+    
+                marker_a1f4db3f20c13ec6d78a8c04d4ab78dc.setIcon(icon_f622acbface617c3257b56695f683391);
+            
+    
+            var marker_312c88370d46c4b273c9b1cbc263d9fd = L.marker(
+                [49.25215, 13.9130417],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_201f1ac61b31877a4897f4b5fd7f5108 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bbc0f06737a91f52ef379e15c52c986d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a79756cc31e080fe393824b46cb825f5 = $(`<div id="html_a79756cc31e080fe393824b46cb825f5" style="width: 100.0%; height: 100.0%;">ČS 142<br>Roční kontrola: NaT</div>`)[0];
+                popup_bbc0f06737a91f52ef379e15c52c986d.setContent(html_a79756cc31e080fe393824b46cb825f5);
+            
+        
+
+        marker_312c88370d46c4b273c9b1cbc263d9fd.bindPopup(popup_bbc0f06737a91f52ef379e15c52c986d)
+        ;
+
+        
+    
+    
+                marker_312c88370d46c4b273c9b1cbc263d9fd.setIcon(icon_201f1ac61b31877a4897f4b5fd7f5108);
+            
+    
+            var marker_992232597f1ee8f832c4e6ae7fd2bcc3 = L.marker(
+                [49.263466, 13.889463],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_0937c7a9ab1b8511c65acd87c0e1cb6f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e916a4a508d136d58a465f030c004b6b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6424a46c631c6d1e0741fcfb8b98be74 = $(`<div id="html_6424a46c631c6d1e0741fcfb8b98be74" style="width: 100.0%; height: 100.0%;">ČS 143<br>Roční kontrola: NaT</div>`)[0];
+                popup_e916a4a508d136d58a465f030c004b6b.setContent(html_6424a46c631c6d1e0741fcfb8b98be74);
+            
+        
+
+        marker_992232597f1ee8f832c4e6ae7fd2bcc3.bindPopup(popup_e916a4a508d136d58a465f030c004b6b)
+        ;
+
+        
+    
+    
+                marker_992232597f1ee8f832c4e6ae7fd2bcc3.setIcon(icon_0937c7a9ab1b8511c65acd87c0e1cb6f);
+            
+    
+            var marker_a2471851f0a85cd2e1cccb853f38a863 = L.marker(
+                [49.1408064, 14.1834672],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_8f6ad583402907d7fd58cb29f9c4a658 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9469f6d0fa6a3129d0868012ac6fab24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_64a1c0a5f0c8b200dd676caf5add99d6 = $(`<div id="html_64a1c0a5f0c8b200dd676caf5add99d6" style="width: 100.0%; height: 100.0%;">ČS 148<br>Roční kontrola: NaT</div>`)[0];
+                popup_9469f6d0fa6a3129d0868012ac6fab24.setContent(html_64a1c0a5f0c8b200dd676caf5add99d6);
+            
+        
+
+        marker_a2471851f0a85cd2e1cccb853f38a863.bindPopup(popup_9469f6d0fa6a3129d0868012ac6fab24)
+        ;
+
+        
+    
+    
+                marker_a2471851f0a85cd2e1cccb853f38a863.setIcon(icon_8f6ad583402907d7fd58cb29f9c4a658);
+            
+    
+            var marker_793b045b929ced577af10903ecfca35d = L.marker(
+                [49.4389309, 12.829037],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_96221e4b96806841afae94c70b02f884 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_685c7b4f9f9c528c0e575b2b68f8d858 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_84c409d8899c15d164d49eacc0a6be4b = $(`<div id="html_84c409d8899c15d164d49eacc0a6be4b" style="width: 100.0%; height: 100.0%;">ČS 153<br>Roční kontrola: NaT</div>`)[0];
+                popup_685c7b4f9f9c528c0e575b2b68f8d858.setContent(html_84c409d8899c15d164d49eacc0a6be4b);
+            
+        
+
+        marker_793b045b929ced577af10903ecfca35d.bindPopup(popup_685c7b4f9f9c528c0e575b2b68f8d858)
+        ;
+
+        
+    
+    
+                marker_793b045b929ced577af10903ecfca35d.setIcon(icon_96221e4b96806841afae94c70b02f884);
+            
+    
+            var marker_12779020eb0bcde50e9affb8c0f13aa7 = L.marker(
+                [48.8459237, 14.6281989],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_d2ca5d2f2712e1bcdcfc901ff8b004de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_68877ff44325ec707ac06f62979d3d55 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_db784161b0ac8adb6a1b58b010b9e0bb = $(`<div id="html_db784161b0ac8adb6a1b58b010b9e0bb" style="width: 100.0%; height: 100.0%;">ČS 179<br>Roční kontrola: NaT</div>`)[0];
+                popup_68877ff44325ec707ac06f62979d3d55.setContent(html_db784161b0ac8adb6a1b58b010b9e0bb);
+            
+        
+
+        marker_12779020eb0bcde50e9affb8c0f13aa7.bindPopup(popup_68877ff44325ec707ac06f62979d3d55)
+        ;
+
+        
+    
+    
+                marker_12779020eb0bcde50e9affb8c0f13aa7.setIcon(icon_d2ca5d2f2712e1bcdcfc901ff8b004de);
+            
+    
+            var marker_984f1551c489043c89254e5cb2974271 = L.marker(
+                [48.9964272, 15.3490686],
+                {
+}
+            ).addTo(map_88fc6866a5ac899828c33718f7171284);
+        
+    
+            var icon_2358b27195edb36e91ff4b15e03c495d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f394586663d0e4de6037e9094ac64dd1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88fe1b2f08f31c6d0a21a9b1e57d23a7 = $(`<div id="html_88fe1b2f08f31c6d0a21a9b1e57d23a7" style="width: 100.0%; height: 100.0%;">ČS 521<br>Roční kontrola: NaT</div>`)[0];
+                popup_f394586663d0e4de6037e9094ac64dd1.setContent(html_88fe1b2f08f31c6d0a21a9b1e57d23a7);
+            
+        
+
+        marker_984f1551c489043c89254e5cb2974271.bindPopup(popup_f394586663d0e4de6037e9094ac64dd1)
+        ;
+
+        
+    
+    
+                marker_984f1551c489043c89254e5cb2974271.setIcon(icon_2358b27195edb36e91ff4b15e03c495d);
+            
+</script>
 </html>
